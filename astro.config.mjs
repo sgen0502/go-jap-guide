@@ -4,6 +4,8 @@ import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
+    site: 'https://sgen0502.github.io',
+    base: '/',
     integrations: [
         starlight({
             title: 'ゴッデスオーダー初心者ガイド（仮）',
@@ -41,7 +43,6 @@ export default defineConfig({
             ],
         }),
     ],
-    base: '/',
     vite: {
       assetsInclude: ['**/*.jpg', '**/*.png', '**/*.gif'],
       server: {
