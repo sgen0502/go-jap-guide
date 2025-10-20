@@ -1,0 +1,126 @@
+---
+layout: /src/layouts/Character.astro
+title: シク
+description: シク
+face: /src/assets/char/face/siku.jpg
+tags: ['ランク:SSR', '属性:水', 'クラス:制圧', '信念:名誉']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+import AccessoriesIcon from '../../../../components/accessoires/AccessoriesIcon.astro'
+
+#### 専用聖物いる？
+シクに若干の回復能力を付与しつつブレイクダメージも上昇させる優秀な聖物。<br/>
+`が正直レア聖物でもある程度役割を果たせるので、優先度は低め`<br/>
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <RelicIcon rank={'SSR'} name={'専用'}/>
+  <span> = </span>
+  <RelicIcon rank={'R'} name={'知恵の翼トーテム'}/>
+  <span> = </span>
+  <RelicIcon rank={'R'} name={'酷寒の角杯'}/>
+  <span> > </span>
+  <RelicIcon rank={'SR'} name={'占代英雄の月桂冠'}/>
+</div>
+`少し特殊なので追記：凸４以下だと酷寒の角杯、凸5なら知恵の翼トーテム。専用あるなら知らん！`
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、ブレイクダメージ%、HP〇〇％以上で攻撃アップ、回避・パリィ時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      HP％、DEF％、属性ダメージアップ、攻撃プラス、被弾時ダメージ減少、クリティカル率、登場時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      クリティカルダメージ
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <AccessoriesIcon className={'breaker'} name="Earrings of Interruption" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'breaker'} name="Necklace of Will" lang={'jp'} noShine={true}/>
+  <span> > </span>
+  <AccessoriesIcon className={'breaker'} name="Earrings of Resolve" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'breaker'} name="Ring of Reversal" lang={'jp'} noShine={true}/>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={4}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="lion" count={4}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="marksman" count={4}/>
+  </span>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      戦闘開始時、【万年雪の冷気】を100％獲得する。<br/>
+      【強化精霊術】、【冬の鎚】の使用で消費する【万年雪の冷気】が20％減少し、【満腹のアグル】状態で1秒ごとに消費する【万年雪の冷気】が30％減少する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      【酷寒の傷】による受ける水ダメージ増加量が25％、ブレイク中の被ダメージ量増加が50％に増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      【強化精霊術】でダメージを与えると【冬の鎚】の再使用CTをリセットする。<br/>
+      【強化精霊術】と【冬の鎚】のダメージ量が25％増加し、ブレイクダメージ量が25％増加する。
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+`固有 > 基本 = 特殊 > アルティメット`
+
+#### まとめ
+凸１では、シクが戦闘開始直後から【満腹のアグル】に入れるようになり序盤からブレイクを狙いやすくなり、またその状態をより長く維持できるようになります。<br/>
+凸３では、デバフ効果が強化され、水属性パーティの火力上昇に貢献。<br/>
+凸５では、ダメージ出力とブレイク性能が上昇します。<br/>
+さらに凸５では、【強化精霊術】と【冬の鎚】コンボを無限に繰り返すことが可能になり、圧倒的なブレイク性能を発揮します。<br/>
+全て用意できれば回復・バリア・デバフ・ブレイクと非常に高い汎用性を持つキャラクターになります。

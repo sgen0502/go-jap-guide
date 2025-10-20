@@ -1,0 +1,8 @@
+---
+import Default from '@astrojs/starlight/components/PageTitle.astro';
+
+// 公式ガイド準拠：現在ページのデータは Astro.locals.starlightRoute から取得
+const fm = Astro.locals.starlightRoute?.entry?.data ?? {};
+const shouldHide = fm.description === 'hide';
+---
+{!shouldHide && <Default><slot /></Default>}

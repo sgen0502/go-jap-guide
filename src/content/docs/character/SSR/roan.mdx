@@ -1,0 +1,122 @@
+---
+layout: /src/layouts/Character.astro
+title: ロアン
+description: ロアン
+face: /src/assets/char/face/roan.jpg
+tags: ['ランク:SSR', '属性:雷', 'クラス:制圧', '信念:友情']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+import AccessoriesIcon from '../../../../components/accessoires/AccessoriesIcon.astro'
+
+#### 専用聖物いる？
+クリティカル率を上げながらクリティカル時に【光明】を10回復されることでかなり簡単に【充満な光輝】状態になれます。<br/>
+`立ち回りをかなり楽にしてくれるので、ロアンを使うなら優先度は高いです。`<br/>
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <RelicIcon rank={'SSR'} name={'専用'}/>
+  <span> > </span>
+  <RelicIcon rank={'R'} name={'知恵の翼トーテム'}/>
+  <span> > </span>
+  <RelicIcon rank={'SR'} name={'古代英雄の月桂冠'}/>
+  <span> = </span>
+  <RelicIcon rank={'SR'} name={'神女金陽花'}/>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、ブレイクダメージ%、登場時攻撃アップ、HP〇〇％以上で攻撃アップ、回避・パリィ時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      HP％、DEF％、属性ダメージアップ、攻撃プラス、被弾時ダメージ減少
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      クリティカル率、クリティカルダメージ
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <AccessoriesIcon className={'breaker'} name="Earrings of Interruption" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'breaker'} name="Necklace of Will" lang={'jp'} noShine={true}/>
+  <span> > </span>
+  <AccessoriesIcon className={'breaker'} name="Earrings of Resolve" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'breaker'} name="Ring of Reversal" lang={'jp'} noShine={true}/>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="knight" count={2}/>
+    <SpellIcon type="deer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="lion" count={4}/>
+  </span>
+  <span> ・ </span>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      【充満な光輝】状態の時、持続的に消費される【光明】が25％減少し、ブレイクダメージ量が20％増加する。<br/>
+      【充満な光輝】状態でない時、スキルで獲得する【光明】が50％増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      【充満な光輝】状態の時、被ダメージが追加で20％減少し、【基本スキル】使用中に発生する追加ダメージ量が100％増加する。<br/>
+      【目には目を】／【太陽の宣告】／【報いの一撃】を使うと、スキル威力の40％の追加ダメージを与える。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      【充満な光輝】状態になると、【報いの一撃】の再使用CTがリセットされる。<br/>
+      【報いの一撃】の再使用CTが50％短縮し、スキルダメージ量と【ブレイクダメージ】が30％増加する。<br/>
+      【報いの一撃】が命中すると、対象のブレイク状態での被ダメージ量が20％増加する。（30秒持続）
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+`基本 = 特殊 > 固有 > アルティメット`
+
+#### まとめ
+凸１では、ロアンが自身メインギミックである【充満な光輝】を発動・維持をしやすくなります。<br/>
+凸３でダメージが大きく強化され、凸５になると、【報いの一撃】を短い間隔で使用できるようになり、PvP・PvEどちらでもかなり使いやすくなります。<br/>

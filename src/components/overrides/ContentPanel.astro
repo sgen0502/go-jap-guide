@@ -1,0 +1,35 @@
+---
+/**
+    * 最上部の区切り線（divider）を出さない。
+    * ページ frontmatter に hideTitle: true があれば、
+    * 先頭パネルのボーダー/区切りを抑止します。
+    */
+import Default from '@astrojs/starlight/components/ContentPanel.astro';
+
+const route = Astro.locals.starlightRoute;
+const fm = route?.entry?.data ?? {};
+const shouldHide = fm.description === 'hide';
+
+// 先頭の ContentPanel だけに効かせたいのでクラスを付与
+let klass = Astro.props.class ?? '';
+if (shouldHide) {
+    klass = `${klass} sl-no-top-divider`;
+}
+
+// Default に class を渡して描画
+---
+<Default {...Astro.props} class={klass}>
+    <slot />
+</Default>
+
+<style>
+    /* 先頭パネルの上側ボーダー/区切りを消す。
+       ContentPanel のマークアップに依存しにくいよう “最初のパネル + 印付けクラス” を併用 */
+    :global(main .sl-no-top-divider:first-of-type) {
+        border-top: none !important;
+    }
+    /* 万一 <hr> を使うテーマでも消せるよう保険 */
+    :global(main .sl-no-top-divider:first-of-type hr) {
+        display: none !important;
+    }
+</style>

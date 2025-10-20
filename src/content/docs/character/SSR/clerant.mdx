@@ -1,0 +1,134 @@
+---
+layout: /src/layouts/Character.astro
+title: クレラント
+description: クレラント
+face: /src/assets/char/face/clerant.jpg
+tags: ['ランク:SSR', '属性:水', 'クラス:戦術', '信念:友情']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+
+#### 専用聖物いる？
+[湖の刃]が適用された敵に与えるクリティカルダメージが30%、クリティカル率が15%上昇します。<br/>
+`クレラントをメインに使う・凸５まで育てるつもりなら取得するのはアリ、優先度は低め`
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <div className="ex-relic-chip">専用</div>
+  <span> = </span>
+  <div className="sr-relic-chip">砂時計</div>
+  <span> > </span>
+  <div className="sr-relic-chip">禁書</div>
+  <span> > </span>
+  <div className="r-relic-chip">仮面</div>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+    <tr>
+      <th>高</th>
+      <td>
+        攻撃力%、クリティカル率、クリティカルダメージ、回避・パリィ時攻撃アップ、登場時攻撃アップ
+      </td>
+    </tr>
+    <tr>
+      <th>中</th>
+      <td>
+        HP〇〇％以上で攻撃アップ、水ダメージアップ、攻撃プラス
+      </td>
+    </tr>
+    <tr>
+      <th>低</th>
+      <td>
+        スタミナ回復、アルティメット回復
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">冷徹のリング</div>
+  <span> > </span>
+  <div className="n-relic-chip">破裂のイヤリング</div>
+  <span> > </span>
+  <div className="n-relic-chip">災害のネックレス</div>
+  <span> = </span>
+  <div className="n-relic-chip">一心のリング</div>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="archer" count={2}/>
+    <SpellIcon type="deer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="wolf" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+</div>
+<div className={'flex flex-row gap-2'}>
+  <div>`黒い亀裂（戦乱の暴風）攻略時には`</div>
+  <SpellIcon type="archer" count={4}/>
+  <div>`も有用`</div>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+    <tr>
+      <th style={{minWidth: '50px'}}>解放</th>
+      <th>内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>凸1</th>
+      <td>
+        【基本スキル】の3回目の攻撃と、【反撃スキル】、【支援スキル】で与える【凍結】のスタック数が1個増加する。
+        【激流新】で攻撃するたびに、ダメージを受ける敵に【凍結】を1スタック付与する。
+      </td>
+    </tr>
+    <tr>
+      <th>凸3</th>
+      <td>
+        【凍結】を適用すると取得する【湖の剣】が10%増加し、与える追加ダメージが30%増加する。
+        【湖の刃】を保有中の敵が受けるすべてダメージに対するクリティカル攻撃発生率の増加数値が30%になる。
+      </td>
+    </tr>
+    <tr>
+      <th>凸5</th>
+      <td>
+        【激流斬】のダメージ量が50%増加する。
+        連続して使うと、 2回目の【激流斬】は【湖の剣】を消費しない。
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">特殊</div>
+  <span> = </span>
+  <div className="n-relic-chip">固有</div>
+  <span> > </span>
+  <div className="n-relic-chip">基本</div>
+  <span> > </span>
+  <div className="n-relic-chip">アルティメット</div>
+</div>
+
+#### まとめ
+クレランは【激流斬】使用中無敵状態になるため、被弾を避けやすく安定した立ち回りが可能です。<br/>
+凸１と凸３では、クレラントが【凍結】と【湖の剣】のスタックをより素早く重ねられるようになり、ダメージを安定して出し続けることができます。<br/>
+さらに凸５では、【湖の剣】が最大スタック時に【激流斬】を２回以上連続で使用できるようになり、ダメージ出力が一段と強化されます。(4~6回連続で使用可能に)
+上記した通り【激流斬】は無敵ですので、ボス戦などで一方的に攻撃出来るのが強みです。

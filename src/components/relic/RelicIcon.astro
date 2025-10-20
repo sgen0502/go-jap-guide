@@ -1,0 +1,41 @@
+---
+/**
+    * CharacterCard.astro — Tailwind + Astro（React不要）
+    *
+    * Props
+    * - portraitSrc: 中央キャラ画像（PNG推奨・透過が綺麗）
+    * - name: 任意（下部の丸pillに表示）
+    * - rank: "N" | "R" | "SR" | "SSR"（右下）
+    * - classIconSrc: 左上アイコン（例：本）
+    * - attributeIconSrc: 左下アイコン（例：水）
+    * - size: "sm" | "md" | "lg"（カード寸法）
+    * - diamondCount: 上部ダイヤの個数（0 で非表示）
+    */
+
+interface Props {
+    name: string
+    rank: 'SSR' | 'SR' | 'R' | 'N';
+}
+
+const {
+    name,
+    rank,
+} = Astro.props;
+
+let className = '';
+switch (rank) {
+    case 'SSR':
+        className = 'ex-relic-chip';
+        break;
+    case 'SR':
+        className = 'sr-relic-chip';
+        break;
+    case 'R':
+        className = 'r-relic-chip';
+        break;
+    case 'N':
+        className = 'n-relic-chip';
+        break;
+}
+---
+<div class={className}>{name}</div>

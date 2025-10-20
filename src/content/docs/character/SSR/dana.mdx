@@ -1,0 +1,131 @@
+---
+layout: /src/layouts/Character.astro
+title: デイナ
+description: デイナ
+face: /src/assets/char/face/dana.jpg
+tags: ['ランク:SSR', '属性:火', 'クラス:支援', '信念:情熱']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+
+#### 専用聖物いる？
+専用聖物を装備すると、デイナの攻撃力が上昇し、バフ効果がさらに強化されます。<br/>
+また、【スピリットボンバー】がクリティカルダメージ上昇効果も付与するようになります。<br/>
+`デイナを持ってる人ならゲーム内で最優先で入手するべき聖物です。`
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <RelicIcon rank={'SSR'} name={'専用'}/>
+  <span> > </span>
+  <RelicIcon rank={'SR'} name={'青天の霹靂の聖画'}/>
+  <span> > </span>
+  <RelicIcon rank={'R'} name={'雷伝令のサンダル'}/>
+  <span> > </span>
+  <RelicIcon rank={'SR'} name={'ニコス二世の折り鶴'}/>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、攻撃プラス、リンク回復
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      スタミナ回復、アルティメット回復
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      他
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">先鋒大将のイヤリング</div>
+  <span> = </span>
+  <div className="n-relic-chip">砲撃のリング</div>
+  <span> > </span>
+  <div className="n-relic-chip">応援のイヤリング</div>
+  <span> > </span>
+  <div className="n-relic-chip">行進のリング</div>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="knight" count={4}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={4}/>
+  </span>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      【スピリット】を6個保有した状態で戦闘を開始する。<br/>
+      ディナが待機／リンク中の時、スタミナ自然回復量が50％増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      【ショータイム！】を使うと、【リンクゲージ】が追加で20％回復する。<br/>
+      ディナが付与するバフの基本持続時間が3秒延長する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      スキル使用による【スピリット】獲得量が2倍に増加し、ディナの【スピリットボンバー】の効果数値が30％増加する。
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">特殊</div>
+  <span> > </span>
+  <div className="n-relic-chip">固有</div>
+  <span> > </span>
+  <div className="n-relic-chip">アルティメット</div>
+  <span> > </span>
+  <div className="n-relic-chip">基本</div>
+</div>
+
+#### まとめ
+現状最も優秀な支援キャラクターの一人であるデイナは、味方全体の攻撃力・クリティカルダメージを上昇させることができるのが強みです。<br/>
+凸１では、【スピリット】６スタックを溜めるまでの時間が短縮されます。<br/>
+凸３では、【リンクゲージ】のチャージ速度が大幅に上昇します。<br/>
+凸１と凸３の効果により、デイナはリンクスイッチを使って、最大持続時間のまま自身のバフを味方へ引き継ぐことが可能になります。<br/>
+凸５で、使い勝手とバフ能力がより強化されます。<br/>
+
+忘れがちですがリンクスイッチしないとデイナのバフは味方に付与されないので使用するときは注意しましょう。

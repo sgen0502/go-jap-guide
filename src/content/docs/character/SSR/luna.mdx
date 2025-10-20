@@ -1,0 +1,132 @@
+---
+layout: /src/layouts/Character.astro
+title: ルナ
+description: ルナ
+face: /src/assets/char/face/luna.jpg
+tags: ['ランク:SSR', '属性:水', 'クラス:強襲', '信念:均衡']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+import AccessoriesIcon from '../../../../components/accessoires/AccessoriesIcon.astro'
+
+#### 専用聖物いる？
+専用聖物を装備するとルナのバフ能力がかなり強化されます。
+また特殊スキルを使っている間に無敵時間を付与するのでPvE・PvP両方で有用です。<br/>
+`ルナをメインに使うなら優先度は高い。`
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <RelicIcon rank={'SSR'} name={'専用'}/>
+  <span> >= </span>
+  <RelicIcon rank={'SR'} name={'混沌のささやき'}/>
+  <span> > </span>
+  <RelicIcon rank={'SR'} name={'ネエシスの執行'}/>
+  <span> = </span>
+  <RelicIcon rank={'R'} name={'崇高な犠牲'}/>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、クリティカルダメージ、登場時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      クリティカル率、HP〇〇％以上で攻撃アップ、回避・パリィ時攻撃アップ、属性ダメージアップ、攻撃プラス
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      スタミナ回復、アルティメット回復
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <AccessoriesIcon className={'slayer'} name="Ring of Ambush" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'slayer'} name="Ring of Fallout" lang={'jp'} noShine={true}/>
+  <span> > </span>
+  <AccessoriesIcon className={'slayer'} name="Earrings of Foundation" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'slayer'} name="Necklace of Executioners" lang={'jp'} noShine={true}/>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="archer" count={2}/>
+    <SpellIcon type="deer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="wolf" count={2}/>
+    <SpellIcon type="archer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={4}/>
+  </span>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      戦闘開始時、【氷花】を3ゲージ獲得する。<br/>
+      【アバランチェ】を使うと、【氷花】を3ゲージ獲得し、15秒間クリティカル率が25％増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      【コールドスナップ】を使うと、8秒間ルナが与える水属性ダメージが15％増加する。<br/>
+      パッシブバフ1スタックにつきクリティカルダメージが10％増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      【特殊スキル】で与えるダメージが20％増加する。<br/>
+       各【特殊スキル】に以下の効果が追加される。<br/>
+      【ダイヤモンドダスト】敵を倒すと、氷花を1ゲージ獲得（再使用CT2秒）<br/>
+      【グレイシャルスパイク】クリティカル攻撃発生時に獲得する氷花が2倍に増加する。<br/>
+      【ブリザードバースト】ブレイク中の敵にこの【特殊スキル】でダメージを与えると、氷花を1ゲージ回復する。（再使用CT3秒）
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+`特殊　> 基本 > アルティメット > 固有`
+
+#### まとめ
+凸１では、戦闘開始時および登場スキルを使用した際に【氷華】を３チャージしてくれる事で立ち回りが各段によくなります。<br/>
+凸３では、ルナのダメージ出力が上昇します。この辺から火力運用がしやすくなります<br/>
+凸５では、【特殊スキル】のダメージが大幅に強化され、さらに【固有スキル】で【氷華】をチャージしなくても、【特殊スキル】をより連続に使用できるようになります。<br/>
+凸３でもかなり強力ですが、凸５まで上げることでルナの真価が発揮されます。<br/>
+注意事項ですが専用聖物を装備しても凸１・３がないとバフが掛からないっぽい？（要検証）

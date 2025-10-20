@@ -1,0 +1,21 @@
+---
+import {findAccessoryByNameAndClass} from "../../data/AccessoriesMap";
+interface Props {
+    className: string;
+    name: string;
+    lang: 'jp' | 'en';
+    noShine?: boolean;
+}
+
+const {
+    className,
+    name,
+    lang,
+    noShine
+} = Astro.props;
+
+const accessory = findAccessoryByNameAndClass(className, name);
+const accessoryName = accessory ? (lang === 'jp' ? accessory.jp_name : accessory.name) : name;
+const replacedName = noShine ? accessoryName.replace(/輝く/g, '') : accessoryName;
+---
+<div class="n-relic-chip">{replacedName}</div>

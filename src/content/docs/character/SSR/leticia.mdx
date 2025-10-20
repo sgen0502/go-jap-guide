@@ -1,0 +1,136 @@
+---
+layout: /src/layouts/Character.astro
+title: レティシア
+description: レティシア
+face: /src/assets/char/face/leti.jpg
+tags: ['ランク:SSR', '属性:風', 'クラス:強襲', '信念:情熱']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+
+#### 専用聖物いる？
+スタミナ回復速度を上げながら攻撃力を凸０でも20％上げれる（ささやき凸５と同程度の期待値）。<br/>
+`レティシアをメインに使う・凸５まで育てるつもりなら取得するのはアリ、優先度は中。`<br/>
+**ただし、私は凸０ならささやき凸５で代用可能と考えています。**
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <RelicIcon rank={'SSR'} name={'専用'}/>
+  <span> >= </span>
+  <RelicIcon rank={'SR'} name={'混沌のささやき'}/>
+  <span> > </span>
+  <RelicIcon rank={'SR'} name={'ネエシスの執行'}/>
+  <span> >= </span>
+  <RelicIcon rank={'SR'} name={'謀略の茶碗'}/>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、クリティカル率、クリティカルダメージ、回避・パリィ時攻撃アップ、登場時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      スタミナ回復、HP〇〇％以上で攻撃アップ、属性ダメージアップ、攻撃プラス
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      他
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">布石のイヤリング</div>
+  <span> = </span>
+  <div className="n-relic-chip">周到のイヤリング</div>
+  <span> > </span>
+  <div className="n-relic-chip">奇襲のリング</div>
+  <span> = </span>
+  <div className="n-relic-chip">余風のリング</div>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="archer" count={2}/>
+    <SpellIcon type="deer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="wolf" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+</div>
+<div className={'flex flex-row gap-2'}>
+  <div>`黒い亀裂（戦乱の暴風）攻略時には`</div>
+  <SpellIcon type="archer" count={4}/>
+  <div>`も有用`</div>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      【ボルトラッシュ】を使うと、【雲】を1個召喚する。<br/>
+      【雲】の持続時間が2秒延長される。
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      【雲】が3個の時、【プラズマカレント】のスタミナ消費量が20％減少し、【テンペストコール】のダメージ量が30％増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      召喚された【雲】1個あたりの与えるダメージ量が15％増加する。<br/>
+      【雲】が消える時、【アルティメットゲージ】が15％回復する。
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">固有</div>
+  <span> = </span>
+  <div className="n-relic-chip">特殊</div>
+  <span> > </span>
+  <div className="n-relic-chip">基本</div>
+  <span> > </span>
+  <div className="n-relic-chip">アルティメット</div>
+</div>
+
+#### まとめ
+凸１と凸３では、レティシアのメインギミックが強化されます。<br/>
+レティシアは【雲】を３つフィールド上に出すことでダメージを最大化できます。<br/>
+また、より多くのスタミナを確保して【雲】を召喚し、【固有スキル】を使って【雲】のダメージを高める必要があります。<br/>
+凸５では、【必殺スキル】の発動が早まり、エナジー負担が軽減。即座に３つの【雲】を召喚できるようになります。<br/>
+40秒のクールタイムが在る為連発は出来ませんが、それでも40秒毎に３つの【雲】を展開できるのは大きな強化です。

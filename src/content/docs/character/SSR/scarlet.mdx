@@ -1,0 +1,130 @@
+---
+layout: /src/layouts/Character.astro
+title: スカーレット
+description: スカーレット
+face: /src/assets/char/face/scarlet.jpg
+tags: ['ランク:SSR', '属性:火', 'クラス:突撃', '信念:情熱']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+import AccessoriesIcon from '../../../../components/accessoires/AccessoriesIcon.astro'
+
+#### 専用聖物いる？
+専用聖物を装備するだけで特殊スキルを使用すると【アーケインゲージ】が15%回復します。<br/>
+オマケにメイン火力である固有スキルのダメージも上昇します。<br/>
+`スカーレットを使うなら入手推奨。`
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <div className="ex-relic-chip">専用</div>
+  <span> > </span>
+  <div className="sr-relic-chip">カプラン王朝実録</div>
+  <span> = </span>
+  <div className="sr-relic-chip">深淵の棘</div>
+  <span> > </span>
+  <div className="sr-relic-chip">銀翼の祈願</div>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、クリティカル率、クリティカルダメージ、回避・パリィ時攻撃アップ、登場時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      HP〇〇％以上で攻撃アップ、属性ダメージアップ、攻撃プラス
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      スタミナ回復、アルティメット回復
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <AccessoriesIcon className={'fighter'} name="Ring of Inspiration" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'fighter'} name="Necklace of Discipline" lang={'jp'} noShine={true}/>
+  <span> > </span>
+  <AccessoriesIcon className={'fighter'} name="Ring of Fury" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'fighter'} name="Earrings of Comeback" lang={'jp'} noShine={true}/>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="archer" count={2}/>
+    <SpellIcon type="deer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="wolf" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      「【プラズマバラージ】／【バーストレーザー】」が命中すると、対象に適用された【火傷】の持続時間が1秒延長される。
+      【火傷】状態のチャンピオン／ボスにダメージを与えた時に獲得する【アーケインチャージ】が、追加で5％増加する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      スカーレットが【火傷】状態の敵を攻撃し倒すことで獲得する【アーケインチャージ】が50％増加し、【火傷】状態でない敵を攻撃したり倒した場合も、50％の【アーケインチャージ】を獲得する。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      【アーケインチャージ】が25％チャージされるたびに、スカーレットの攻撃力が10％上昇する。【アーケインチャージ】を消費後も8秒間維持される。
+      【オーバーチャージレーザー】を使った後に倒した敵がいなかった場合、【アーケインチャージ」を50％取得する（再使用CT20秒）
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">固有</div>
+  <span> > </span>
+  <div className="n-relic-chip">特殊</div>
+  <span> = </span>
+  <div className="n-relic-chip">基本</div>
+  <span> > </span>
+  <div className="n-relic-chip">アルティメット</div>
+</div>
+
+#### まとめ
+凸３以前は、他騎士による「火傷」支援がない場合、スカーレットは【アーケインチャージ】を溜める手段が特殊とカウンタースキルに限られています。(専用聖物で緩和可能)<br/>
+しかし、凸３以降はその制限がかなり緩くなります。かなり楽にチャージできるようになり。使用感が大きく向上しまう。<br/>
+さらに凸５では、ボス戦や固い敵相手には約２秒ぐらいでレーザーを連発できるようになり、圧倒的な火力を発揮します。

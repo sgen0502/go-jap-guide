@@ -1,0 +1,45 @@
+---
+/**
+    * CharacterCard.astro — Tailwind + Astro（React不要）
+    *
+    * Props
+    * - portraitSrc: 中央キャラ画像（jpg推奨・透過が綺麗）
+    * - name: 任意（下部の丸pillに表示）
+    * - rank: "N" | "R" | "SR" | "SSR"（右下）
+    * - classIconSrc: 左上アイコン（例：本）
+    * - attributeIconSrc: 左下アイコン（例：水）
+    * - size: "sm" | "md" | "lg"（カード寸法）
+    * - diamondCount: 上部ダイヤの個数（0 で非表示）
+    */
+
+interface Props {
+    type: 'marksman' | 'knight' | 'wolf' | 'deer' | 'lion' | 'archer';
+    count?: number
+}
+
+const {
+    type,
+    count,
+} = Astro.props;
+
+//    "支援": "/src/assets/class/supporter.jpg",
+const iconMap = {
+    marksman: '/src/assets/spell/marksman.jpg',
+    knight: '/src/assets/spell/knight.jpg',
+    wolf: '/src/assets/spell/wolf.jpg',
+    deer: '/src/assets/spell/deer.jpg',
+    lion: '/src/assets/spell/lion.jpg',
+    archer: '/src/assets/spell/archer.jpg',
+} as const;
+const attributeIconSrc = iconMap[type];
+---
+<span class="relative">
+    <img src={attributeIconSrc} alt="attribute" class="h-10 w-10 object-contain" draggable="false" />
+    {count !== undefined && count > 0 && (
+        <div class="absolute -bottom-2 left-8
+        bg-green-600 border-2 border-green-200 text-white text-xs font-bold
+        rounded-full w-5 h-5 flex items-center justify-center">
+            {count}
+        </div>
+    )}
+</span>

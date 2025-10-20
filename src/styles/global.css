@@ -1,0 +1,29 @@
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+.ex-relic-chip{
+    @apply rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm font-bold transition-all shadow-sm text-slate-600;
+    background: #FFE5A0;
+    color: #473817;
+}
+
+.sr-relic-chip{
+    @apply rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm font-bold transition-all shadow-sm text-slate-600;
+    background: #E6CFF2;
+    color: #4C2080;
+}
+
+.r-relic-chip{
+    @apply rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm font-bold transition-all shadow-sm text-slate-600;
+    background: #BFE1F6;
+    color: #0A459F;
+}
+
+.n-relic-chip{
+    @apply rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm font-bold transition-all shadow-sm text-slate-600;
+    background: #c9c9c9;
+    color: #212121;
+}

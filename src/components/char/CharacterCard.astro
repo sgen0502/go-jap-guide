@@ -1,0 +1,116 @@
+---
+/**
+    * CharacterCard.astro — Tailwind + Astro（React不要）
+    *
+    * Props
+    * - portraitSrc: 中央キャラ画像（PNG推奨・透過が綺麗）
+    * - name: 任意（下部の丸pillに表示）
+    * - rank: "N" | "R" | "SR" | "SSR"（右下）
+    * - classIconSrc: 左上アイコン（例：本）
+    * - attributeIconSrc: 左下アイコン（例：水）
+    * - size: "sm" | "md" | "lg"（カード寸法）
+    * - diamondCount: 上部ダイヤの個数（0 で非表示）
+    */
+
+interface Props {
+    portraitSrc: string;
+    name?: string;
+    rank?: "N" | "R" | "SR" | "SSR";
+    classIconSrc?: string;
+    attributeIconSrc?: string;
+    size?: "sm" | "md" | "lg";
+    diamondCount?: number;
+    // altテキスト（指定なければ name を使う）
+    alt?: string;
+}
+
+const {
+    portraitSrc,
+    name,
+    rank = "SSR",
+    classIconSrc,
+    attributeIconSrc,
+    size = "md",
+    diamondCount = 0,
+    alt,
+} = Astro.props;
+
+const sizeMap: Record<NonNullable<Props["size"]>, string> = {
+    sm: "w-[180px] h-[220px]",
+    md: "w-[220px] h-[270px]",
+    lg: "w-[260px] h-[320px]",
+};
+
+// ランクの見栄え
+const rankClass =
+    rank === "SSR"
+        ? "bg-gradient-to-br from-yellow-200 via-amber-300 to-orange-400 bg-clip-text text-transparent drop-shadow"
+        : rank === "SR"
+            ? "text-violet-300 drop-shadow"
+            : rank === "R"
+                ? "text-sky-300 drop-shadow"
+                : "text-neutral-200";
+
+// テキストサイズ
+const rankSize = size === "sm" ? "text-lg" : size === "md" ? "text-xl" : "text-2xl";
+const portraitMaxH = size === "sm" ? "max-h-[88%]" : size === "md" ? "max-h-[90%]" : "max-h-[92%]";
+---
+
+<div class={`relative overflow-hidden rounded-2xl bg-transparent isolate select-none ${sizeMap[size]}`} role="group" aria-label={name ? `${name} card` : "character card"}>
+    <!-- わずかな縁取り（任意） -->
+    <div class="absolute inset-0 rounded-2xl ring-1 ring-white/10 pointer-events-none"></div>
+
+    <!-- 左上：クラス -->
+    {classIconSrc && (
+            <div class="absolute left-2 top-0 z-20">
+                <div class="rounded-xl bg-black/40 backdrop-blur px-1.5 py-1 shadow">
+                    <img src={classIconSrc} alt="class" class="h-6 w-6 object-contain" draggable="false" />
+                </div>
+            </div>
+    )}
+
+    <!-- 左下：属性 -->
+    {attributeIconSrc && (
+            <div class="absolute left-2 bottom-2 z-20">
+                <div class="rounded-xl bg-black/40 backdrop-blur px-1.5 py-1 shadow">
+                    <img src={attributeIconSrc} alt="attribute" class="h-6 w-6 object-contain" draggable="false" />
+                </div>
+            </div>
+    )}
+
+    <!-- 右下：ランク -->
+    <div class="absolute right-2 bottom-2 z-20">
+        <div class="rounded-xl bg-black/40 backdrop-blur px-2 py-1 shadow">
+            <span class={`font-extrabold tracking-wide align-middle ${rankClass} ${rankSize}`}>{rank}</span>
+        </div>
+    </div>
+
+    <!-- 中央：キャラ画像 -->
+    <div class="absolute inset-0 z-10 flex items-end justify-center mb-12">
+        <img
+                src={portraitSrc}
+                alt={alt ?? name ?? "character"}
+                class={`pointer-events-none object-contain drop-shadow-xl ${portraitMaxH}`}
+                draggable="false"
+        />
+    </div>
+
+    <!-- 上部：ダイヤ装飾（任意） -->
+    {diamondCount > 0 && (
+            <div class="absolute top-2 right-0 left-0 z-0 flex justify-center gap-1">
+                {Array.from({ length: diamondCount }).map((_, i) => (
+                        <span class="h-2 w-2 rotate-45 rounded-[2px] bg-cyan-300/70 shadow" aria-hidden="true"></span>
+                ))}
+            </div>
+    )}
+
+    <!-- 下部：名前（任意） -->
+    {name && (
+            <div class="absolute bottom-0 left-1/2 z-20 -translate-x-1/2">
+                <div class="rounded-full bg-black/35 px-3 py-1 backdrop-blur">
+                    <span class="text-sm font-semibold text-white/90">{name}</span>
+                </div>
+            </div>
+    )}
+</div>
+
