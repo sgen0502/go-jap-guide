@@ -4,7 +4,7 @@ import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-    site: 'https://sgen0502.github.io',
+    site: 'https://go-jap-guide.pages.dev',
     base: '/',
     integrations: [
         starlight({
