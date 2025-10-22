@@ -1,0 +1,141 @@
+---
+layout: /src/layouts/Character.astro
+title: クレア
+description: クレア
+face: /char/face/crea.png
+tags: ['ランク:SSR', '属性:地', 'クラス:強襲', '信念:情熱']
+hideTitle: true
+next: false
+prev: false
+---
+import SpellIcon from '../../../../components/spell/SpellIcon.astro'
+import RelicIcon from '../../../../components/relic/RelicIcon.astro'
+import AccessoriesIcon from '../../../../components/accessoires/AccessoriesIcon.astro'
+
+#### 専用聖物いる？
+弾装填に消費するスタミナを軽減しながらクリティカル率を20％上げれる。<br/>
+`火力に直結しないので装備を攻撃力・クリティカルダメージに寄らせない調整しない場合は優先度：低`<br/>
+
+#### おすすめ聖物
+<div className={'flex gap-2'}>
+  <RelicIcon rank={'SR'} name={'混沌のささやき'}/>
+  <span> >= </span>
+  <RelicIcon rank={'SR'} name={'ネエシスの執行'}/>
+  <span> >= </span>
+  <RelicIcon rank={'SSR'} name={'専用'}/>
+  <span> >= </span>
+  <RelicIcon rank={'R'} name={'崇高な犠牲'}/>
+</div>
+
+#### 装備ステータス優先順位
+<table>
+  <tbody>
+  <tr>
+    <th>高</th>
+    <td>
+      攻撃力%、クリティカル率、クリティカルダメージ、回避・パリィ時攻撃アップ、登場時攻撃アップ
+    </td>
+  </tr>
+  <tr>
+    <th>中</th>
+    <td>
+      HP〇〇％以上で攻撃アップ、属性ダメージアップ、攻撃プラス
+    </td>
+  </tr>
+  <tr>
+    <th>低</th>
+    <td>
+      スタミナ回復、アルティメット回復
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### おすすめアクセサリ
+<div className={'flex gap-2'}>
+  <AccessoriesIcon className={'slayer'} name="Earrings_of_Foundation" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'slayer'} name="Ring_of_Ambush" lang={'jp'} noShine={true}/>
+  <span> > </span>
+  <AccessoriesIcon className={'slayer'} name="Necklace_of_Executioners" lang={'jp'} noShine={true}/>
+  <span> = </span>
+  <AccessoriesIcon className={'slayer'} name="Ring_of_Fallout" lang={'jp'} noShine={true}/>
+</div>
+
+#### おすすめ呪文
+<div className={'relative flex gap-2'}>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="deer" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="archer" count={2}/>
+    <SpellIcon type="deer" count={2}/>
+  </span>
+  <span> ・ </span>
+  <span className={'flex flex-row gap-2'}>
+    <SpellIcon type="wolf" count={2}/>
+    <SpellIcon type="marksman" count={2}/>
+  </span>
+</div>
+<div className={'flex flex-row gap-2'}>
+  <div>`黒い亀裂（戦乱の暴風）攻略時には`</div>
+  <SpellIcon type="archer" count={4}/>
+  <div>`も有用`</div>
+</div>
+
+#### 解放スキル
+<table>
+  <thead>
+  <tr>
+    <th style={{minWidth: '50px'}}>解放</th>
+    <th>内容</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <th>凸1</th>
+    <td>
+      クレアが敵を倒した時に、空の弾倉がある場合、【イコライザー弾】を1発装填する。<br/>
+      【ヴェンデッタ】を持ったまま敵を倒した場合、直ちに【ヴェンデッタ】1スタックを消費して【ホワイトロックの安否】を1発装填する。（装填効果の再使用CT3秒）
+    </td>
+  </tr>
+  <tr>
+    <th>凸3</th>
+    <td>
+      【ヴェンデッタ】を獲得した時に、空の弾倉がある場合、1スタックを消費して【ホワイトロックの安否】を1発装填する。<br/>
+      【グランフィナーレ】／【シレンツィオエテルノ】を使用後、【ホワイトロックの安否】を3発装填する。弾倉がフルの場合は装填効果は発生しない。
+    </td>
+  </tr>
+  <tr>
+    <th>凸5</th>
+    <td>
+      【ルパラ・ビアンカ】使用時、15秒間攻撃力が20％上昇する。<br/>
+      【ホワイトロックの安否】を6発獲得した状態で戦闘に突入する。<br/>
+      【オメルタ】と【ルパラ・ビアンカ】のダメージが30％増加する。<br/>
+      【オメルタ】と【ルパラ・ビアンカ】を使用して弾倉を使い果たすと、すぐに【ホワイトロックの安否】を3発装填する。（再使用CT20秒）
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+#### スキル強化優先順位
+<div className={'flex gap-2'}>
+  <div className="n-relic-chip">特殊</div>
+  <span> > </span>
+  <div className="n-relic-chip">基本</div>
+  <span> >= </span>
+  <div className="n-relic-chip">アルティメット</div>
+  <span> > </span>
+  <div className="n-relic-chip">固有</div>
+</div>
+
+
+#### まとめ
+このゲームでは珍しく凸０でも最低限の運用が可能なキャラクターです。<br/>
+雑に最初の6発を連打してもそこそこなダメージが出せるためSSRの中でも凸０性能はそこそこ高め。<br/>
+凸１で敵を倒すたびに弾を1発装填できるようになるため、雑魚相手の立ち回りが非常に楽になります。<br/>
+凸３でヴェンデッタ取得時に自動装填が追加されるため、カウンターが得意なプレイヤーにはここから使い勝手がかなり向上。<br/>
+また、グランフィナーレ／シレンツィオエテルノ使用後に強化弾3発装填されるため、アルティメットを絡めた立ち回りも強化されます。<br/>
+凸５では開幕1000％ｘ６発の大ダメージを狙えるようになり、さらにオメルタ／ルパラ・ビアンカの火力も大幅に強化されるため、総合的な火力が大幅に向上します。
