@@ -3,7 +3,6 @@ title: 北部戦線
 description: Common questions asked.
 ---
 チャプター３をクリアすることで解放されるコンテンツです。<br/>
-またの名をピックアップ騎士の番宣ダンジョンです。
 
 ![north_map.png](../../../assets/north/north_map.png)
 1次戦線～５次戦線のレベル別のダンジョンを攻略していくのですが進むにつれて敵が強くなり、計略（デメリット効果）が増えていきます。
